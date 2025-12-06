@@ -1,0 +1,27 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+
+# Secrets (never commit)
+.env
+.env.*
+
+# Databases
+*.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data artefacts (non-raw; raw data stays tracked)
+data/intermediate/
+data/cache/
+models/
+
+# OS/editor junk
+.DS_Store
+.vscode/
+.idea/
+
