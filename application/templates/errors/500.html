@@ -1,0 +1,18 @@
+{% extends "includes/base.html" %}
+
+{% block title %}500 · Internal server error{% endblock %}
+
+{% block content %}
+<section class="error-section">
+  <h1 class="error-code">500 · Internal server error</h1>
+  <p class="error-message">
+    Something went wrong on the server while handling your request.
+  </p>
+  <p class="error-message">
+    Try again. If it repeats, note the last inputs in your report.
+  </p>
+  <a href="{{ url_for('main.hdb_predict') }}" class="btn-primary">
+    Back to prediction page
+  </a>
+</section>
+{% endblock %}

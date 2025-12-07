@@ -1,6 +1,10 @@
-pandas
+Flask
+Flask-Login
+Flask-WTF
+Flask-SQLAlchemy
+python-dotenv
+joblib
 numpy
-matplotlib
-seaborn
+pandas
 scikit-learn
-jupyter
+email-validator

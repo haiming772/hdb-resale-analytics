@@ -1,0 +1,90 @@
+{# application/templates/includes/base.html #}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}HDB Resale Analytics{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet/dist/leaflet.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  </head>
+  <body>
+    <header class="top-nav">
+      <div class="nav-inner">
+        <a href="{{ url_for('main.index') }}" class="brand">
+          <div class="brand-avatar">H</div>
+          <div class="brand-text">
+            <div class="brand-title">HDB Resale Analytics</div>
+          </div>
+        </a>
+
+        <nav class="nav-links">
+          <a
+            href="{{ url_for('main.index') }}"
+            class="nav-link {% if request.endpoint == 'main.index' %}active{% endif %}"
+            >Home</a
+          >
+          <a
+            href="{{ url_for('main.hdb_predict') }}"
+            class="nav-link {% if request.endpoint == 'main.hdb_predict' %}active{% endif %}"
+            >Predict</a
+          >
+          <a
+            href="{{ url_for('main.history') }}"
+            class="nav-link {% if request.endpoint == 'main.history' %}active{% endif %}"
+            >History</a
+          >
+        </nav>
+
+        <div class="nav-right">
+          {% if current_user.is_authenticated %}
+          <span class="nav-user">{{ current_user.username }}</span>
+          <a href="{{ url_for('auth.logout') }}" class="btn btn-outline">Logout</a>
+          {% else %}
+          <a href="{{ url_for('auth.login') }}" class="btn btn-outline">Login</a>
+          {% endif %}
+        </div>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="flash-stack">
+          {% for category, message in messages %}
+          <div class="flash flash-{{ category }}">{{ message }}</div>
+          {% endfor %}
+        </div>
+        {% endif %}
+      {% endwith %}
+
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-shell footer-inner">
+        <span>ST1516 · DevOps &amp; Applied Analytics · Singapore HDB Market</span>
+        <span>Data source: data.gov.sg — HDB resale flat prices (2017 onwards)</span>
+        <span>For educational purposes only — not financial advice.</span>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="{{ url_for('static', filename='js/map.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+
+  </body>
+</html>

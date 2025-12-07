@@ -1,0 +1,38 @@
+{% extends "includes/base.html" %}
+
+{% block title %}Login · HDB Resale Analytics{% endblock %}
+
+{% block content %}
+<section class="auth-section">
+  <div class="card auth-card">
+    <h2 class="card-title">Login</h2>
+    <p class="card-subtitle">
+      Sign in to view your prediction history and keep your scenarios in one
+      place.
+    </p>
+
+    <form method="POST" novalidate>
+      {{ form.hidden_tag() }}
+
+      <div class="form-field">
+        {{ form.email.label(class="form-label") }}
+        {{ form.email(class="form-control") }}
+      </div>
+
+      <div class="form-field">
+        {{ form.password.label(class="form-label") }}
+        {{ form.password(class="form-control") }}
+      </div>
+
+      <div class="form-actions">
+        {{ form.submit(class="btn-primary btn-full") }}
+      </div>
+
+      <p class="auth-switch">
+        Don't have an account?
+        <a href="{{ url_for('auth.register') }}">Create one</a>.
+      </p>
+    </form>
+  </div>
+</section>
+{% endblock %}

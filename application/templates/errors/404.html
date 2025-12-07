@@ -1,0 +1,15 @@
+{% extends "includes/base.html" %}
+
+{% block title %}404 · Page not found{% endblock %}
+
+{% block content %}
+<section class="error-section">
+  <h1 class="error-code">404 · Page not found</h1>
+  <p class="error-message">
+    The page you’re looking for doesn’t exist or has moved.
+  </p>
+  <a href="{{ url_for('main.hdb_predict') }}" class="btn-primary">
+    Back to prediction page
+  </a>
+</section>
+{% endblock %}

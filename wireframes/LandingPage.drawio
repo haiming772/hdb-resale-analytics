@@ -1,0 +1,100 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.2.4">
+  <diagram name="Page-1" id="XfvqXAC02Wc7XlMoijVq">
+    <mxGraphModel dx="1577" dy="1130" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="L2j0YuVq0gTQC4Kh1DLu-2" parent="1" style="text;whiteSpace=wrap;html=1;" value="&#xa;  &#xa;    &#xa;      &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;      &#xa;    &#xa;  &#xa;" vertex="1">
+          <mxGeometry height="2820" width="30" x="400" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="L2j0YuVq0gTQC4Kh1DLu-3" parent="1" style="text;whiteSpace=wrap;html=1;" value="&#xa;  &#xa;    &#xa;      &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        &#xa;        &#xa;        &#xa;          &#xa;        " vertex="1">
+          <mxGeometry height="4080" width="30" x="460" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="L2j0YuVq0gTQC4Kh1DLu-44" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E8EEF2;strokeColor=none;" value="Background: HDB cityscape (light)" vertex="1">
+          <mxGeometry height="900" width="1440" x="970" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="L2j0YuVq0gTQC4Kh1DLu-45" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="60" width="1440" x="970" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="L2j0YuVq0gTQC4Kh1DLu-46" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#3B5FCC;strokeColor=#3B5FCC;fontColor=#FFFFFF;fontSize=20;fontStyle=1;" value="H" vertex="1">
+          <mxGeometry height="34" width="34" x="1280" y="223" as="geometry" />
+        </mxCell>
+        <mxCell id="L2j0YuVq0gTQC4Kh1DLu-47" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=16;fontColor=#2C3E50;fontStyle=1;" value="HDB Resale Analytics" vertex="1">
+          <mxGeometry height="20" width="180" x="1324" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="L2j0YuVq0gTQC4Kh1DLu-48" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=14;fontColor=#3B5FCC;fontStyle=1;" value="Home" vertex="1">
+          <mxGeometry height="16" width="50" x="1649" y="232" as="geometry" />
+        </mxCell>
+        <mxCell id="L2j0YuVq0gTQC4Kh1DLu-49" parent="1" style="line;strokeWidth=2;fillColor=none;strokeColor=#3B5FCC;" value="" vertex="1">
+          <mxGeometry height="3" width="50" x="1649" y="252" as="geometry" />
+        </mxCell>
+        <mxCell id="L2j0YuVq0gTQC4Kh1DLu-50" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=14;fontColor=#5A6C7D;" value="Predict" vertex="1">
+          <mxGeometry height="16" width="60" x="1720" y="232" as="geometry" />
+        </mxCell>
+        <mxCell id="L2j0YuVq0gTQC4Kh1DLu-51" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=14;fontColor=#5A6C7D;" value="History" vertex="1">
+          <mxGeometry height="16" width="60" x="1801" y="232" as="geometry" />
+        </mxCell>
+        <mxCell id="L2j0YuVq0gTQC4Kh1DLu-52" parent="1" style="text;html=1;align=right;verticalAlign=middle;fontSize=13;fontColor=#5A6C7D;" value="haiming" vertex="1">
+          <mxGeometry height="16" width="60" x="2000" y="232" as="geometry" />
+        </mxCell>
+        <mxCell id="L2j0YuVq0gTQC4Kh1DLu-53" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=13;fontColor=#2C3E50;fontStyle=1;" value="Logout" vertex="1">
+          <mxGeometry height="16" width="50" x="2075" y="232" as="geometry" />
+        </mxCell>
+        <mxCell id="L2j0YuVq0gTQC4Kh1DLu-54" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1E3A8A;strokeColor=none;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="200" width="590" x="1280" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="L2j0YuVq0gTQC4Kh1DLu-55" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=10;fontColor=#93C5FD;" value="ST1516 - DEVOPS &amp; APPLIED ANALYTICS · SINGAPORE HDB MARKET" vertex="1">
+          <mxGeometry height="12" width="540" x="1305" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="L2j0YuVq0gTQC4Kh1DLu-56" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=28;fontColor=#FFFFFF;fontStyle=1;" value="Explore Singapore HDB resale prices" vertex="1">
+          <mxGeometry height="35" width="540" x="1305" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="L2j0YuVq0gTQC4Kh1DLu-57" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=13;fontColor=#DBEAFE;" value="This app wraps your ExtraTrees regression model into an interactive tool.&#xa;Describe a flat, refine amenity access and get an estimated resale price based&#xa;on 180,000+ HDB transactions (2017-2024)." vertex="1">
+          <mxGeometry height="48" width="540" x="1305" y="395" as="geometry" />
+        </mxCell>
+        <mxCell id="L2j0YuVq0gTQC4Kh1DLu-58" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3B5FCC;strokeColor=#3B5FCC;fontColor=#FFFFFF;fontSize=14;fontStyle=1;arcSize=20;" value="Open predictor" vertex="1">
+          <mxGeometry height="36" width="140" x="1305" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="L2j0YuVq0gTQC4Kh1DLu-59" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FFFFFF;fontColor=#1E3A8A;fontSize=14;arcSize=20;" value="View my history" vertex="1">
+          <mxGeometry height="36" width="140" x="1460" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="L2j0YuVq0gTQC4Kh1DLu-60" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E5E7EB;arcSize=8;" value="" vertex="1">
+          <mxGeometry height="200" width="380" x="1900" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="L2j0YuVq0gTQC4Kh1DLu-61" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=10;fontColor=#9CA3AF;fontStyle=1;" value="WHAT YOU CAN DO HERE" vertex="1">
+          <mxGeometry height="12" width="330" x="1925" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="L2j0YuVq0gTQC4Kh1DLu-66" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E5E7EB;arcSize=8;" value="" vertex="1">
+          <mxGeometry height="320" width="590" x="1280" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="L2j0YuVq0gTQC4Kh1DLu-67" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=18;fontColor=#111827;fontStyle=1;" value="HDB resale price trend" vertex="1">
+          <mxGeometry height="22" width="540" x="1305" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="L2j0YuVq0gTQC4Kh1DLu-68" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=12;fontColor=#6B7280;" value="Median resale prices across all towns and flat types, 2017–2024." vertex="1">
+          <mxGeometry height="16" width="540" x="1305" y="587" as="geometry" />
+        </mxCell>
+        <mxCell id="L2j0YuVq0gTQC4Kh1DLu-69" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F9FAFB;strokeColor=#D1D5DB;fontSize=11;fontColor=#6B7280;" value="[LINE CHART: Blue upward trend 2017-2024, $300K→$560K]" vertex="1">
+          <mxGeometry height="210" width="540" x="1305" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="L2j0YuVq0gTQC4Kh1DLu-71" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E5E7EB;arcSize=8;" value="" vertex="1">
+          <mxGeometry height="320" width="380" x="1900" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="L2j0YuVq0gTQC4Kh1DLu-72" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=18;fontColor=#111827;fontStyle=1;" value="Market snapshot" vertex="1">
+          <mxGeometry height="22" width="330" x="1925" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="L2j0YuVq0gTQC4Kh1DLu-80" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F9FAFB;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="60" width="1440" x="970" y="1050" as="geometry" />
+        </mxCell>
+        <mxCell id="L2j0YuVq0gTQC4Kh1DLu-81" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#6B7280;" value="ST1516 · DevOps &amp; Applied Analytics" vertex="1">
+          <mxGeometry height="16" width="300" x="1200" y="1072" as="geometry" />
+        </mxCell>
+        <mxCell id="L2j0YuVq0gTQC4Kh1DLu-82" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=11;fontColor=#6B7280;" value="Data source: data.gov.sg — HDB resale flat prices" vertex="1">
+          <mxGeometry height="16" width="300" x="1540" y="1072" as="geometry" />
+        </mxCell>
+        <mxCell id="L2j0YuVq0gTQC4Kh1DLu-83" parent="1" style="text;html=1;align=right;verticalAlign=middle;fontSize=11;fontColor=#6B7280;" value="For educational purposes only" vertex="1">
+          <mxGeometry height="16" width="200" x="1980" y="1072" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

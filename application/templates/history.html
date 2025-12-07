@@ -1,0 +1,57 @@
+{# application/templates/history.html #}
+{% extends "includes/base.html" %}
+
+{% block title %}History · HDB Resale Analytics{% endblock %}
+
+{% block content %}
+<section class="history-section">
+  <h1 class="page-title">Prediction history</h1>
+  <p class="section-subtitle">
+    These are the most recent predictions linked to your account. Use them to compare towns,
+    flat types and amenity scenarios over time.
+  </p>
+
+  <div class="card-panel">
+    <div class="history-header-row">
+      <h2 class="panel-title">Recent predictions (last 100)</h2>
+      <span class="panel-tag">{{ predictions|length }} entries</span>
+    </div>
+
+    <div class="table-scroll">
+      <table class="history-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Town</th>
+            <th>Flat</th>
+            <th>Lease / floor</th>
+            <th>Area (sqm)</th>
+            <th>Predicted price</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for p in predictions %}
+          <tr>
+            <td>{{ p.created_at.strftime("%b %d, %Y, %I:%M %p") }}</td>
+            <td>{{ p.town }}</td>
+            <td>{{ p.flat_type }} · {{ p.flat_model }}</td>
+            <td>{{ "%.0f"|format(p.remaining_lease_years) }} yrs · lvl {{ p.storey_mid }}</td>
+            <td>{{ "%.0f"|format(p.floor_area_sqm) }}</td>
+            <td>${{ "{:,.0f}".format(p.predicted_price) }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card-panel m-top-md">
+    <h3 class="panel-title">How this history works</h3>
+    <p class="panel-body-text">
+      Only predictions made while you are logged in are stored. History is capped at the most
+      recent 100 entries for performance. Each entry reflects the features you supplied at that
+      time (town, flat type, floor area, lease, amenity access).
+    </p>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,188 @@
+{# application/templates/hdb_predict.html #}
+{% extends "includes/base.html" %}
+
+{% block title %}Predict · HDB Resale Analytics{% endblock %}
+
+{% block content %}
+<section class="hero-row">
+  <div class="hero-card">
+    <div class="hero-tag">
+      ST1516 · DevOps &amp; Applied Analytics · Singapore HDB Market
+    </div>
+    <h1 class="hero-title">HDB Resale Price Prediction System</h1>
+    <p class="hero-subtitle">
+      Explainable ML insights for Singapore HDB resale flats. ExtraTrees regression
+      trained on 180,000+ transactions (2017–2024). Compare towns, flat types and
+      amenity access in a single interface.
+    </p>
+    <div class="hero-actions">
+      <a href="#predict-form" class="btn btn-primary">Start price prediction</a>
+    </div>
+  </div>
+
+  <div class="hero-card hero-secondary">
+    <h3 class="panel-label">Median resale price (overview)</h3>
+    <p class="panel-body-text">
+      Median HDB resale prices have increased steadily from 2017 to 2024, with stronger growth observed in larger flat types and well-connected towns. This section provides a high-level view of overall market movement to help users contextualise their price estimates.
+    </p>
+    <ul class="panel-bullets">
+      <li>Rising medians across most towns over 2017–2024.</li>
+      <li>4-room and 5-room flats show stronger price growth than 2- and 3-room units.</li>
+      <li>Central / mature estates remain structurally more expensive than outer-ring towns.</li>
+    </ul>
+ 
+  </div>
+</section>
+
+<section class="map-section">
+  <div class="card-panel map-panel">
+    <div class="panel-header-row">
+      <div>
+        <h2 class="panel-title">Spatial price intelligence</h2>
+        <p class="panel-subtitle">
+          Interactive map of your recent predictions, aggregated by town. Bubble size
+          reflects how many scenarios you tested; colour reflects average predicted price.
+        </p>
+      </div>
+    </div>
+    <div id="map" class="map-canvas"></div>
+    <div class="map-legend">
+      <span class="legend-label">Bubble colour ≈ average predicted price</span>
+      <span class="legend-chip legend-low">Lower</span>
+      <span class="legend-chip legend-mid">Medium</span>
+      <span class="legend-chip legend-high">Higher</span>
+    </div>
+  </div>
+</section>
+
+<section class="predict-layout" id="predict-form">
+  <div class="predict-main card-panel">
+    <h2 class="section-title">Predict a resale price</h2>
+    <p class="section-subtitle">
+      Describe a flat and optionally refine amenity access using approximate distance bands.
+      The model returns an estimated resale price and saves it to your history if logged in.
+    </p>
+
+    <form method="post" novalidate class="predict-form">
+      {{ form.hidden_tag() }}
+
+      <h3 class="fieldset-title">Flat characteristics</h3>
+      <p class="fieldset-subtitle">
+        Town, flat type, structural size and lease remaining. These are the main drivers of price.
+      </p>
+
+      <div class="form-grid">
+        <div class="form-field">
+          {{ form.town.label(class="form-label") }}
+          {{ form.town(class="form-control") }}
+        </div>
+
+        <div class="form-field">
+          {{ form.flat_type.label(class="form-label") }}
+          {{ form.flat_type(class="form-control") }}
+        </div>
+
+        <div class="form-field">
+          {{ form.flat_model.label(class="form-label") }}
+          {{ form.flat_model(class="form-control") }}
+        </div>
+
+        <div class="form-field">
+          {{ form.floor_area_sqm.label(class="form-label") }}
+          {{ form.floor_area_sqm(class="form-control", placeholder="e.g. 90") }}
+          <div class="form-hint">Typical 4-room is ≈ 90 sqm.</div>
+        </div>
+
+        <div class="form-field">
+          {{ form.storey_mid.label(class="form-label") }}
+          {{ form.storey_mid(class="form-control", placeholder="e.g. 8") }}
+          <div class="form-hint">Use your estimated floor (e.g. 7–9 → 8).</div>
+        </div>
+
+        <div class="form-field">
+          {{ form.remaining_lease_years.label(class="form-label") }}
+          {{ form.remaining_lease_years(class="form-control", placeholder="e.g. 65") }}
+        </div>
+
+        <div class="form-field">
+          {{ form.year.label(class="form-label") }}
+          {{ form.year(class="form-control") }}
+        </div>
+      </div>
+
+      <h3 class="fieldset-title m-top-lg">Amenity access (optional)</h3>
+      <p class="fieldset-subtitle">
+        If you are not sure of exact distances, choose approximate ranges.
+        You can also turn this section off to use typical values instead.
+      </p>
+
+      <div class="amenity-toggle">
+        {{ form.use_amenity_distances(class="form-checkbox") }}
+        {{ form.use_amenity_distances.label(class="checkbox-label") }}
+      </div>
+
+      <div class="form-grid">
+        <div class="form-field">
+          {{ form.dist_mrt_band.label(class="form-label") }}
+          {{ form.dist_mrt_band(class="form-control") }}
+        </div>
+
+        <div class="form-field">
+          {{ form.dist_school_band.label(class="form-label") }}
+          {{ form.dist_school_band(class="form-control") }}
+        </div>
+
+        <div class="form-field">
+          {{ form.dist_supermarket_band.label(class="form-label") }}
+          {{ form.dist_supermarket_band(class="form-control") }}
+        </div>
+
+        <div class="form-field">
+          {{ form.dist_health_band.label(class="form-label") }}
+          {{ form.dist_health_band(class="form-control") }}
+        </div>
+      </div>
+
+      <div class="form-actions">
+        {{ form.submit(class="btn btn-primary btn-wide") }}
+      </div>
+
+      {% if predicted_price is not none %}
+      <div class="prediction-result">
+        Estimated resale price:
+        <span class="prediction-value">${{ "{:,.0f}".format(predicted_price) }}</span>
+      </div>
+      {% endif %}
+    </form>
+  </div>
+
+  <aside class="predict-side">
+    <div class="card-panel side-card">
+      <h3 class="panel-title">Model at a glance</h3>
+      <dl class="meta-list">
+        <div>
+          <dt>Data volume</dt>
+          <dd>180,000+ HDB transactions (2017–2024)</dd>
+        </div>
+        <div>
+          <dt>Model fit (R²)</dt>
+          <dd>0.885 on 2023–2024 validation window</dd>
+        </div>
+        <div>
+          <dt>Typical error</dt>
+          <dd>≈ $45K mean absolute error vs. actual resale price</dd>
+        </div>
+      </dl>
+
+      <h4 class="meta-heading">What the model considers</h4>
+      <ul class="panel-bullets">
+        <li><strong>Location intelligence</strong> — town-level market effects.</li>
+        <li><strong>Structural attributes</strong> — flat type, floor area, storey, lease.</li>
+        <li>
+          <strong>Market trends</strong> — resale year and macro price level over time.
+        </li>
+      </ul>
+    </div>
+  </aside>
+</section>
+{% endblock %}
