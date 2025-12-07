@@ -544,6 +544,18 @@ a:hover {
   background: #ffffff;
 }
 
+.form-error {
+  font-size: 11px;
+  color: var(--danger);
+  margin-top: 2px;
+}
+
+.form-control-error {
+  border-color: var(--danger);
+  background: #fef2f2;
+}
+
+
 .form-hint {
   font-size: 11px;
   color: var(--text-soft);

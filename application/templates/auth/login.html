@@ -16,16 +16,28 @@
 
       <div class="form-field">
         {{ form.email.label(class="form-label") }}
-        {{ form.email(class="form-control") }}
+        {{ form.email(
+             class="form-control" + (" form-control-error" if form.email.errors else "")
+           ) }}
+        {% if form.email.errors %}
+          <div class="form-error">{{ form.email.errors[0] }}</div>
+        {% endif %}
       </div>
 
       <div class="form-field">
         {{ form.password.label(class="form-label") }}
-        {{ form.password(class="form-control") }}
+        {{ form.password(
+             class="form-control" + (" form-control-error" if form.password.errors else "")
+           ) }}
+        {% if form.password.errors %}
+          <div class="form-error">{{ form.password.errors[0] }}</div>
+        {% endif %}
       </div>
 
       <div class="form-actions">
-        {{ form.submit(class="btn-primary btn-full") }}
+        <button type="submit" class="btn btn-primary btn-full">
+          Login
+        </button>
       </div>
 
       <p class="auth-switch">
