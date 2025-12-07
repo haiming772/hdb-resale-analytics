@@ -36,10 +36,15 @@ def register():
 
 @auth_bp.route("/login", methods=["GET", "POST"])
 def login():
-    if current_user.is_authenticated:
+    # Always create the form first so POST can be processed
+    form = LoginForm()
+
+    # If user is already logged in and is just visiting /login via GET,
+    # send them to the predictor. But on POST we still validate the password
+    # so tests like "wrong password should fail" behave correctly.
+    if current_user.is_authenticated and request.method == "GET":
         return redirect(url_for("main.hdb_predict"))
 
-    form = LoginForm()
     if form.validate_on_submit():
         user = get_user_by_email(form.email.data.lower())
         if user is None or not user.check_password(form.password.data):

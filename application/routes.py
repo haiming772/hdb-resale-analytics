@@ -10,6 +10,7 @@ from flask import (
     flash,
     request,
     jsonify,
+    current_app,
 )
 from flask_login import login_required, current_user
 
@@ -158,8 +159,23 @@ def api_predict():
             400,
         )
 
-    price = predict_resale_price(**data)
-    save_prediction(predicted_price=price, **data)
+    # Wrap the ML + DB logic in a try/except so unexpected failures
+    # become a clean 500 JSON response instead of crashing the app.
+    try:
+        price = predict_resale_price(**data)
+        save_prediction(predicted_price=price, **data)
+    except Exception as exc:  # noqa: BLE001 - we do want a broad catch here
+        current_app.logger.exception("Unexpected error in /api/predict: %s", exc)
+        return (
+            jsonify(
+                {
+                    "success": False,
+                    "error": "Internal model error while generating prediction.",
+                }
+            ),
+            500,
+        )
+
     return jsonify({"success": True, "predicted_price": price})
 
 
